@@ -13,7 +13,7 @@ public class MainMenuView extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainMenuView.class.getResource("mainmenu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.DECORATED);
         stage.setTitle("Boomberman");
         stage.setScene(scene);
         stage.setResizable(false);
