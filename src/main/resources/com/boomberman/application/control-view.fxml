@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="controlContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="526.0" stylesheets="@../../../css/control-view.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boomberman.controller.ControlViewController">
+   <children>
+      <VBox fx:id="VboxContainer" prefHeight="383.0" prefWidth="526.0">
+         <children>
+            <HBox prefHeight="55.0" prefWidth="532.0">
+               <children>
+                  <Label text="CONTROL" textFill="WHITE">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane fx:id="GridContainer" prefHeight="275.0" prefWidth="526.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.4000244140625" minWidth="10.0" prefWidth="186.39998779296877" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.1999755859375" minWidth="10.0" prefWidth="368.8000122070313" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="157.6" minHeight="10.0" prefHeight="157.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="161.4" minHeight="10.0" prefHeight="149.6" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="56.0" prefWidth="182.0" text="Movement" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="47.0" prefWidth="185.0" text="Place bomb" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <BorderPane fx:id="BorderPaneContainer" prefHeight="114.0" prefWidth="355.0" GridPane.columnIndex="1">
+                     <top>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/up.png" />
+                           </image>
+                        </ImageView>
+                     </top>
+                     <left>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/left.png" />
+                           </image>
+                        </ImageView>
+                     </left>
+                     <bottom>
+                        <ImageView fitHeight="57.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/down.png" />
+                           </image>
+                        </ImageView>
+                     </bottom>
+                     <right>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/right.png" />
+                           </image>
+                        </ImageView>
+                     </right>
+                  </BorderPane>
+                  <BorderPane fx:id="BorderPaneContainer" prefHeight="70.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <center>
+                        <ImageView fitHeight="39.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/space.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
+            <HBox fx:id="Hboxcontainer" alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="526.0">
+               <children>
+                  <Button id="closeButton" fx:id="closeButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#closeControlStage" prefHeight="37.0" prefWidth="58.0" stylesheets="@../../../css/control-view.css" text="Close">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
