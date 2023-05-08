@@ -1,21 +1,20 @@
-package com.boomberman.application;
+package com.boomberman.view;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class GameMenuView extends Application {
+public class MainView extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(GameMenuView.class.getResource("gamemenu-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainMenuView.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setTitle("");
+        stage.initStyle(StageStyle.DECORATED);
+        stage.setTitle("Boomberman");
         stage.setScene(scene);
         stage.setResizable(false);
 

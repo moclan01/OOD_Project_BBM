@@ -1,4 +1,4 @@
-package com.boomberman.view;
+package com.boomberman.view1;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;

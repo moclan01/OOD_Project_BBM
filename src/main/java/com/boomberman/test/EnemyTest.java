@@ -1,6 +1,6 @@
 package com.boomberman.test;
 
-import com.boomberman.view.EnemyView;
+import com.boomberman.view1.EnemyView;
 import javafx.application.Application;
 
 public class EnemyTest {

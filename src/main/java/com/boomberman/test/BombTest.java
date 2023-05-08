@@ -1,6 +1,6 @@
 package com.boomberman.test;
 
-import com.boomberman.view.BombView;
+import com.boomberman.view1.BombView;
 import javafx.application.Application;
 
 public class BombTest {

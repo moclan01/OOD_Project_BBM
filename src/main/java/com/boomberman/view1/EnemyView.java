@@ -1,6 +1,6 @@
-package com.boomberman.view;
+package com.boomberman.view1;
 
-import com.boomberman.model.Enemy;
+import com.boomberman.model.enemy.Enemy;
 import com.boomberman.model.Position;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;

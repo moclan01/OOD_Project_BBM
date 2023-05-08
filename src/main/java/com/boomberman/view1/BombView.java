@@ -1,4 +1,4 @@
-package com.boomberman.view;
+package com.boomberman.view1;
 
 import com.boomberman.model.Bomb;
 import javafx.animation.KeyFrame;

@@ -1,6 +1,6 @@
 package com.boomberman.controller;
 
-import com.boomberman.application.ControlViewApplication;
+import com.boomberman.view.ControlViewApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

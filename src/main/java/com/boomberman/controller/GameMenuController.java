@@ -1,6 +1,6 @@
 package com.boomberman.controller;
 
-import com.boomberman.application.MainMenuView;
+import com.boomberman.view.MainMenuView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,7 +41,6 @@ public class GameMenuController {
     @FXML
     public void closeBbmStage(ActionEvent event){
         Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.getScene().getWindow().getOnShown();
         stage.close();
     }
 }

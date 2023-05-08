@@ -1,7 +1,7 @@
 package com.boomberman.controller;
 
 import com.boomberman.model.GameModel;
-import com.boomberman.view.GameView;
+import com.boomberman.view1.GameView;
 import javafx.scene.input.KeyCode;
 
 public class GameController {

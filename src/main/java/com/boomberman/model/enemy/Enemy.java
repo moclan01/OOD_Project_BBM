@@ -1,5 +1,6 @@
-package com.boomberman.model;
+package com.boomberman.model.enemy;
 
+import com.boomberman.model.Position;
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.Random;

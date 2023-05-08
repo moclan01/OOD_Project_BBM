@@ -1,5 +1,7 @@
 package com.boomberman.model;
 
+import com.boomberman.model.enemy.Enemy;
+
 import java.util.List;
 
 public class GameModel {
