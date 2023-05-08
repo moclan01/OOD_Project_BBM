@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boomberman.controller.MainViewController">
+   <children>
+      <Canvas fx:id="informationPane" height="99.0" width="1280.0" />
+      <Pane fx:id="mainPane" layoutY="98.0" prefHeight="698.0" prefWidth="1280.0" />
+   </children>
+</AnchorPane>
