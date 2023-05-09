@@ -33,12 +33,12 @@ public class Bomb {
 
     }
 
-    public void placeBomb() {
-        Position bombPos = player.getPosition();
-
-        this.setPosition(bombPos);
-        this.explode(bombPos);
-
-    }
+//    public void placeBomb() {
+//        Position bombPos = player.getPosition();
+//
+//        this.setPosition(bombPos);
+//        this.explode(bombPos);
+//
+//    }
 
 }
