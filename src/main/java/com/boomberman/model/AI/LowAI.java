@@ -1,6 +1,6 @@
 package com.boomberman.model.AI;
 
-import com.boomberman.model.Sprites.Sprite;
+import com.boomberman.model.sprites.Sprite;
 
 public class LowAI extends AI{
     private int steps;

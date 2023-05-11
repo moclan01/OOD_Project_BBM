@@ -1,7 +1,7 @@
 package com.boomberman.model.tiles;
 
 import com.boomberman.controller.MainViewController;
-import com.boomberman.model.Sprites.Sprite;
+import com.boomberman.model.sprites.Sprite;
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;

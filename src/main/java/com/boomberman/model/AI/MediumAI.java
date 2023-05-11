@@ -2,7 +2,7 @@ package com.boomberman.model.AI;
 
 import com.boomberman.model.Player;
 import com.boomberman.model.enemy.Enemy;
-import com.boomberman.model.Sprites.Sprite;
+import com.boomberman.model.sprites.Sprite;
 
 public class MediumAI extends AI {
     private final Player player;

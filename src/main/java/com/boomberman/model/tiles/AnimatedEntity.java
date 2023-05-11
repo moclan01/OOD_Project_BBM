@@ -1,6 +1,6 @@
 package com.boomberman.model.tiles;
 
-import com.boomberman.model.Sprites.Sprite;
+import com.boomberman.model.sprites.Sprite;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -46,7 +46,7 @@ public class AnimatedEntity extends Entity{
             deadAnimate();
             return;
         }
-        // nếu player di chueyenr
+        // nếu player di chuyển
         if (goUp) {
             dy -= speed;
             direction = 0;

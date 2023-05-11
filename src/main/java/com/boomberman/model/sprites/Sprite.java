@@ -1,11 +1,11 @@
-package com.boomberman.model.Sprites;
+package com.boomberman.model.sprites;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
-import static com.boomberman.model.Sprites.SpriteSheet.*;
+import static com.boomberman.model.sprites.SpriteSheet.*;
 public class Sprite {
     private static final int DEFAULT_SIZE = 16; // kích thước gốc của character
     private static final int SCALED_FACTOR = 3; // số lần phóng đại

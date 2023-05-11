@@ -1,4 +1,4 @@
-package com.boomberman.model.Sprites;
+package com.boomberman.model.sprites;
 
 import com.boomberman.view.MainMenuView;
 import javafx.scene.image.Image;
