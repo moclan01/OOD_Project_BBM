@@ -1,7 +1,11 @@
 package com.boomberman.model.bomb;
 
+import com.boomberman.model.Player;
+import com.boomberman.model.enemy.Enemy;
 import com.boomberman.model.sprites.Sprite;
 import com.boomberman.model.tiles.AnimatedEntity;
+import com.boomberman.model.tiles.Entity;
+import com.boomberman.model.tiles.Message;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -73,6 +77,53 @@ public class ExploreDirection extends AnimatedEntity {
         update();
     }
 
-    //xử lý sự kiện của vùng bom nổ
+    public boolean flagged() {
+        return flag1;
+    }
 
+    public boolean flagged2() {
+        if(flag1 == true && flag2 == true )
+            return true;
+        return false;
+    }
+    //xử lý sự kiện của vùng bom nổ
+    public boolean collide(Entity e) {
+        if (e instanceof Player && ((Player) e).canPassFlame()) {
+            return false;
+        }
+        return collide(e, this.getX(), this.getY());
+    }
+    @Override
+    public void update() {
+        for (Entity e : entityList) {
+            if (collide(e)) {
+//                if (e instanceof Wall) {
+//                    flag = true;
+//                } else if (e instanceof PowerUp) {
+//                    ((PowerUp) e).setCanActivate(true);
+//                } else if (e instanceof Portal) {
+//                    ((Portal) e).setCanActivate(true);
+//                } else if (e instanceof AnimatedEntity) {
+//                    boolean isRemoved = ((AnimatedEntity) e).isRemoved();
+//                    if (e instanceof Brick) {
+//                        flag2 = true;
+//                    }
+//                    if (e instanceof Enemy) {
+//                        new Message(e.getX(), e.getY(), "+" + ((Enemy) e).getPoint());
+//                        if (!isRemoved) {
+//                            Game.addTotalPoints(((Enemy) e).getPoint());
+//                        }
+//                    }
+//                    if (e instanceof Player) {
+//                        new Message(e.getX(), e.getY(), "-1");
+//                    }
+//                    ((AnimatedEntity) e).remove();
+//                }
+            }
+        }
+        if(!flag1) {
+            animate();
+            render();
+        }
+    }
 }

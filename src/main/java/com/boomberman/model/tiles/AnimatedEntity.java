@@ -75,7 +75,7 @@ public class AnimatedEntity extends Entity{
         render();
     }
 
-    private void animate() {
+    public void animate() {
         //Xóa bỏ nội dung hình ảnh sprite đã vẽ trước đó.
         clear();
 
@@ -91,7 +91,7 @@ public class AnimatedEntity extends Entity{
     Thiết lập sự kiện kết thúc cho PauseTransition để thêm đối tượng hiện tại vào danh sách toRemove để xóa.
     Gọi phương thức animate() và render() để thực hiện hiệu ứng chết.
      */
-    private void deadAnimate() {
+    public void deadAnimate() {
         PauseTransition pauseTransition = new PauseTransition(Duration.millis(500));
         pauseTransition.setOnFinished(new EventHandler<ActionEvent>() {
             @Override
@@ -106,7 +106,7 @@ public class AnimatedEntity extends Entity{
     /*
      mô tả di chuyển
      */
-    private void moveBy(double dx, double dy){
+    public void moveBy(double dx, double dy){
         //Nếu dx và dy đều bằng 0, không di chuyển đối tượng.
         if(dx == 0 && dy == 0) return;
         //Tính toán tọa độ mới của đối tượng sau khi di chuyển.
@@ -140,7 +140,7 @@ public class AnimatedEntity extends Entity{
     Nếu đối tượng không va chạm, trả về false.
     Nếu đối tượng va chạm, thiết lập biến canMove và trả về true.
      */
-    protected boolean collide(Entity e, double x, double y) {
+    public boolean collide(Entity e, double x, double y) {
         if (this == e) {
             return false;
         }
