@@ -2,6 +2,10 @@ package com.boomberman.model.bomb;
 
 import com.boomberman.model.Player;
 import com.boomberman.model.enemy.Enemy;
+import com.boomberman.model.material.Brick;
+import com.boomberman.model.material.Portal;
+import com.boomberman.model.material.Wall;
+import com.boomberman.model.powerUp.PowerUp;
 import com.boomberman.model.sprites.Sprite;
 import com.boomberman.model.tiles.AnimatedEntity;
 import com.boomberman.model.tiles.Entity;
@@ -97,28 +101,28 @@ public class ExploreDirection extends AnimatedEntity {
     public void update() {
         for (Entity e : entityList) {
             if (collide(e)) {
-//                if (e instanceof Wall) {
-//                    flag = true;
-//                } else if (e instanceof PowerUp) {
-//                    ((PowerUp) e).setCanActivate(true);
-//                } else if (e instanceof Portal) {
-//                    ((Portal) e).setCanActivate(true);
-//                } else if (e instanceof AnimatedEntity) {
-//                    boolean isRemoved = ((AnimatedEntity) e).isRemoved();
-//                    if (e instanceof Brick) {
-//                        flag2 = true;
-//                    }
+                if (e instanceof Wall) {
+                    flag1 = true;
+                } else if (e instanceof PowerUp) {
+                    ((PowerUp) e).setCanActivate(true);
+                } else if (e instanceof Portal) {
+                    ((Portal) e).setCanActivate(true);
+                } else if (e instanceof AnimatedEntity) {
+                    boolean isRemoved = ((AnimatedEntity) e).isRemoved();
+                    if (e instanceof Brick) {
+                        flag2 = true;
+                    }
 //                    if (e instanceof Enemy) {
 //                        new Message(e.getX(), e.getY(), "+" + ((Enemy) e).getPoint());
 //                        if (!isRemoved) {
 //                            Game.addTotalPoints(((Enemy) e).getPoint());
 //                        }
 //                    }
-//                    if (e instanceof Player) {
-//                        new Message(e.getX(), e.getY(), "-1");
-//                    }
-//                    ((AnimatedEntity) e).remove();
-//                }
+                    if (e instanceof Player) {
+                        new Message(e.getX(), e.getY(), "-1");
+                    }
+                    ((AnimatedEntity) e).remove();
+                }
             }
         }
         if(!flag1) {
