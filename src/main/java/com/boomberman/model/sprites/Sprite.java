@@ -140,6 +140,11 @@ public class Sprite {
 
     public static final Sprite tiger_dead = new Sprite(4, 8);
 
+    //dead act for all
+    public static final Sprite mob_dead1 = new Sprite(15, 0);
+    public static final Sprite mob_dead2 = new Sprite(15, 1);
+    public static final Sprite mob_dead3 = new Sprite(15, 2);
+
     //bomb
     public static final Sprite bomb = new Sprite(0, 3);
     public static final Sprite bomb_1 = new Sprite(1, 3);

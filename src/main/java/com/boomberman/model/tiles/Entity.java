@@ -1,6 +1,7 @@
 package com.boomberman.model.tiles;
 
 import com.boomberman.controller.MainViewController;
+import com.boomberman.model.bomb.ExploreDirection;
 import com.boomberman.model.sprites.Sprite;
 import javafx.scene.canvas.GraphicsContext;
 
@@ -55,20 +56,20 @@ public abstract class Entity {
 
     public abstract void update();
 
-//    public static void updateList() {
-//        entityList.addAll(0, toAdd);
-//
-//        entityList.removeAll(toRemove);
-//        for (Entity e : toRemove) {
-//            if(e instanceof ExplodeDirection && ((ExplodeDirection) e).flagged()) {
-//                continue;
-//            }
-//            e.clear();
-//        }
-//
-//        toAdd.clear();
-//        toRemove.clear();
-//    }
+    public static void updateList() {
+        entityList.addAll(0, toAdd);
+
+        entityList.removeAll(toRemove);
+        for (Entity e : toRemove) {
+            if(e instanceof ExploreDirection && ((ExploreDirection) e).flagged()) {
+                continue;
+            }
+            e.clear();
+        }
+
+        toAdd.clear();
+        toRemove.clear();
+    }
 
     public void clear() {
         gc.clearRect(x, y, Sprite.getScaledSize(), Sprite.getScaledSize());
