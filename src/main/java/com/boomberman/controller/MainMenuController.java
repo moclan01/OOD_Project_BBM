@@ -1,12 +1,10 @@
 package com.boomberman.controller;
 
-import com.boomberman.view.ControlViewApplication;
-import com.boomberman.view.MainMenuView;
-import com.boomberman.view.MainView;
+import com.boomberman.test.ControlViewApplication;
+import com.boomberman.app.MenuApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -28,7 +26,7 @@ public class MainMenuController {
     private Pane mainMenu;
     @FXML
     public void newGameStage() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainMenuView.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MenuApp.class.getResource("main-view.fxml"));
         mainMenu.getChildren().setAll((Pane)fxmlLoader.load());
     }
 

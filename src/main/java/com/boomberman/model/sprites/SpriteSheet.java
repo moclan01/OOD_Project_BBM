@@ -1,6 +1,6 @@
 package com.boomberman.model.sprites;
 
-import com.boomberman.view.MainMenuView;
+import com.boomberman.app.MenuApp;
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
@@ -19,7 +19,7 @@ public class SpriteSheet {
     }
 
     private void load(){
-        InputStream inputStream = MainMenuView.class.getResourceAsStream(path);
+        InputStream inputStream = MenuApp.class.getResourceAsStream(path);
         //kiểm tra đối tượng truyền vào
         if(inputStream == null){
             throw new RuntimeException("File not found: " + path);

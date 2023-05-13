@@ -1,6 +1,6 @@
 package com.boomberman.controller;
 
-import com.boomberman.view.MainMenuView;
+import com.boomberman.app.MenuApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -34,7 +34,7 @@ public class GameMenuController {
     @FXML
     public void openMainMenuStage(ActionEvent actionEvent) throws Exception {
         Stage stage = new Stage();
-        MainMenuView view = new MainMenuView();
+        MenuApp view = new MenuApp();
         view.start(stage);
     }
 

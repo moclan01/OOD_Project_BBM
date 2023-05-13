@@ -22,7 +22,7 @@
                <children>
                   <Label text="CONTROL" textFill="WHITE">
                      <font>
-                        <Font size="38.0" />
+                        <Font name="System Bold" size="38.0" />
                      </font>
                   </Label>
                </children>
@@ -47,14 +47,7 @@
                         <Font size="32.0" />
                      </font>
                   </Label>
-                  <BorderPane fx:id="BorderPaneContainer" prefHeight="114.0" prefWidth="355.0" GridPane.columnIndex="1">
-                     <top>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                           <image>
-                              <Image url="@../../../icon/up.png" />
-                           </image>
-                        </ImageView>
-                     </top>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <left>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
@@ -62,13 +55,13 @@
                            </image>
                         </ImageView>
                      </left>
-                     <bottom>
-                        <ImageView fitHeight="57.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <top>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../../../icon/down.png" />
+                              <Image url="@../../../icon/up.png" />
                            </image>
                         </ImageView>
-                     </bottom>
+                     </top>
                      <right>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
@@ -76,10 +69,17 @@
                            </image>
                         </ImageView>
                      </right>
+                     <bottom>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../icon/down.png" />
+                           </image>
+                        </ImageView>
+                     </bottom>
                   </BorderPane>
-                  <BorderPane fx:id="BorderPaneContainer" prefHeight="70.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <center>
-                        <ImageView fitHeight="39.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fitHeight="51.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../../../icon/space.png" />
                            </image>

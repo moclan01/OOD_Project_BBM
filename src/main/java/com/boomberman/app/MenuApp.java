@@ -1,4 +1,4 @@
-package com.boomberman.view;
+package com.boomberman.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,11 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class MainMenuView extends Application {
+public class MenuApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainMenuView.class.getResource("mainmenu-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MenuApp.class.getResource("mainmenu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         stage.initStyle(StageStyle.DECORATED);
