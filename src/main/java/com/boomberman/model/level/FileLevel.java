@@ -1,5 +1,6 @@
 package com.boomberman.model.level;
 
+import com.boomberman.app.MenuApp;
 import com.boomberman.model.Player;
 import com.boomberman.model.enemy.*;
 import com.boomberman.model.material.Brick;
@@ -25,28 +26,28 @@ public class FileLevel {
     }
 
     public void loadLevel(int level) {
-//        try {
-//            InputStream input = Bomberman.class.getResourceAsStream("levels/Level" + level + ".txt");
-//            assert input != null;
-//            InputStreamReader fileReader = new InputStreamReader(input);
-//            BufferedReader in = new BufferedReader(fileReader);
-//
-//            String data = in.readLine();
-//            StringTokenizer tokens = new StringTokenizer(data);
-//
-//            level = Integer.parseInt(tokens.nextToken());
-//            height = Integer.parseInt(tokens.nextToken());
-//            width = Integer.parseInt(tokens.nextToken());
-//
-//            lineTiles = new String[height];
-//
-//            for (int i = 0; i < height; i++) {
-//                lineTiles[i] = in.readLine().substring(0, width);
-//            }
-//            in.close();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            InputStream input = MenuApp.class.getResourceAsStream("levels/Level" + level + ".txt");
+            assert input != null;
+            InputStreamReader fileReader = new InputStreamReader(input);
+            BufferedReader in = new BufferedReader(fileReader);
+
+            String data = in.readLine();
+            StringTokenizer tokens = new StringTokenizer(data);
+
+            level = Integer.parseInt(tokens.nextToken());
+            height = Integer.parseInt(tokens.nextToken());
+            width = Integer.parseInt(tokens.nextToken());
+
+            lineTiles = new String[height];
+
+            for (int i = 0; i < height; i++) {
+                lineTiles[i] = in.readLine().substring(0, width);
+            }
+            in.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void createEntities() {

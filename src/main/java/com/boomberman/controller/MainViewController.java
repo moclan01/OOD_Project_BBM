@@ -19,7 +19,7 @@ public class MainViewController {
 
     private static Pane staticPane;
     private static GraphicsContext gc;
-    private static GraphicsContext gcBanner;
+    private static GraphicsContext gcInformationPane;
 
     public static Pane getPane() {
         return staticPane;
@@ -30,12 +30,12 @@ public class MainViewController {
     }
 
     public static GraphicsContext getGcBanner() {
-        return gcBanner;
+        return gcInformationPane;
     }
     @FXML
     private void initialize(){
         gc = canvas.getGraphicsContext2D();
-        gcBanner = informationPane.getGraphicsContext2D();
+        gcInformationPane = informationPane.getGraphicsContext2D();
         staticPane = mainPane;
     }
 }

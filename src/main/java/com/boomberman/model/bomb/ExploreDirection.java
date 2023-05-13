@@ -1,5 +1,6 @@
 package com.boomberman.model.bomb;
 
+import com.boomberman.model.Game;
 import com.boomberman.model.Player;
 import com.boomberman.model.enemy.Enemy;
 import com.boomberman.model.material.Brick;
@@ -112,12 +113,12 @@ public class ExploreDirection extends AnimatedEntity {
                     if (e instanceof Brick) {
                         flag2 = true;
                     }
-//                    if (e instanceof Enemy) {
-//                        new Message(e.getX(), e.getY(), "+" + ((Enemy) e).getPoint());
-//                        if (!isRemoved) {
-//                            Game.addTotalPoints(((Enemy) e).getPoint());
-//                        }
-//                    }
+                    if (e instanceof Enemy) {
+                        new Message(e.getX(), e.getY(), "+" + ((Enemy) e).getPoint());
+                        if (!isRemoved) {
+                            Game.addTotalPoints(((Enemy) e).getPoint());
+                        }
+                    }
                     if (e instanceof Player) {
                         new Message(e.getX(), e.getY(), "-1");
                     }
