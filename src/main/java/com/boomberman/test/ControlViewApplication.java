@@ -1,6 +1,6 @@
 package com.boomberman.test;
 
-import com.boomberman.app.MenuApp;
+import com.boomberman.app.Bomberman;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,7 +17,7 @@ public class ControlViewApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MenuApp.class.getResource("control-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Bomberman.class.getResource("control-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         stage.initStyle(StageStyle.UNDECORATED);

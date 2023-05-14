@@ -210,7 +210,7 @@ public class Sprite {
     //sao chép các giá trị màu RGB của sprite từ sprite sheet vào mảng pixels (lấy các nhân vật)
     private void load() {
         for (int i = 0; i < DEFAULT_SIZE; ++i) {
-            System.arraycopy(spriteSheet.getPixels(), X + (i + Y) * spriteSheet.getSize(), pixels, i * 16, DEFAULT_SIZE);
+            System.arraycopy(spriteSheet.getPixels(),X + (i + Y) * spriteSheet.getSize(), pixels, i * 16, DEFAULT_SIZE);
         }
     }
     /*
@@ -228,8 +228,8 @@ public class Sprite {
         PixelReader pixelReader = inputImage.getPixelReader();
         PixelWriter pixelWriter = outputImage.getPixelWriter();
 
-        for (int i = 0; i < width; i++){
-            for (int j = 0; j < height; j++){
+        for (int j = 0; j < height; j++){
+            for (int i = 0; i < width; i++){
                 //lưu trữ giá trị màu
                 final int rgb = pixelReader.getArgb(i,j);
                 for (int scaledY = 0; scaledY < SCALED_FACTOR; ++scaledY) {
@@ -248,12 +248,12 @@ public class Sprite {
         WritableImage image = new WritableImage(DEFAULT_SIZE, DEFAULT_SIZE);
         PixelWriter pixelWriter = image.getPixelWriter();
 
-        for (int x = 0; x < DEFAULT_SIZE; ++x) {
-            for (int y = 0; y < DEFAULT_SIZE; ++y) {
-                if (pixels[x + y * DEFAULT_SIZE] == TRANSPARENT) {
-                    pixelWriter.setArgb(x, y, 0);
+        for (int i = 0; i < DEFAULT_SIZE; ++i) {
+            for (int j = 0; j < DEFAULT_SIZE; ++j) {
+                if (pixels[i + j * DEFAULT_SIZE] == TRANSPARENT) {
+                    pixelWriter.setArgb(i, j, 0);
                 } else {
-                    pixelWriter.setArgb(x, y, pixels[x + y * DEFAULT_SIZE]);
+                    pixelWriter.setArgb(i, j, pixels[i + j * DEFAULT_SIZE]);
                 }
             }
         }

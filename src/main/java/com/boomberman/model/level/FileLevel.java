@@ -1,6 +1,6 @@
 package com.boomberman.model.level;
 
-import com.boomberman.app.MenuApp;
+import com.boomberman.app.Bomberman;
 import com.boomberman.model.Player;
 import com.boomberman.model.enemy.*;
 import com.boomberman.model.material.Brick;
@@ -27,7 +27,7 @@ public class FileLevel {
 
     public void loadLevel(int level) {
         try {
-            InputStream input = MenuApp.class.getResourceAsStream("levels/Level" + level + ".txt");
+            InputStream input = Bomberman.class.getResourceAsStream("level/Level" + level + ".txt");
             assert input != null;
             InputStreamReader fileReader = new InputStreamReader(input);
             BufferedReader in = new BufferedReader(fileReader);

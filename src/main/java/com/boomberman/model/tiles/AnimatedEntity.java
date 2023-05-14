@@ -83,6 +83,7 @@ public class AnimatedEntity extends Entity{
         ++frame;
         if(frame >= 10){
             spriteIndex = ++spriteIndex % spriteList.get(direction).size();
+            frame = 0;
         }
     }
 
@@ -114,13 +115,11 @@ public class AnimatedEntity extends Entity{
         double y = this.y + dy;
         //Nếu đối tượng va chạm với các đối tượng khác, ngừng di chuyển.
         //Nếu đối tượng không va chạm, di chuyển đối tượng đến tọa độ mới.
-        if(moveCheck(x,y)){
+        if(!moveCheck(x,y)){
             return;
         }
-
         this.x = x;
         this.y =y;
-
     }
     /*
     Kiểm tra xem đối tượng có va chạm với các đối tượng khác hay không.

@@ -17,7 +17,7 @@ public class InformationPane {
     private final IntegerProperty timeSeconds;
 
     public InformationPane() {
-        gc = MainViewController.getGcBanner();
+        gc = MainViewController.getGcInformationPane();
         gc.setFill(Color.WHITE);
         gc.setTextBaseline(VPos.CENTER);
 
@@ -30,12 +30,13 @@ public class InformationPane {
         return timeSeconds.get() == 0;
     }
 
+    //
     public void startTimer() {
         int time = 200;
         timeSeconds.set(time);
 
         timeline.getKeyFrames().clear();
-        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(time + 1), new KeyValue(timeSeconds, 0)));
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(time + 1),new KeyValue(timeSeconds, 0)));
         timeline.playFromStart();
     }
 

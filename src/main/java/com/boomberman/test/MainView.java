@@ -1,6 +1,6 @@
 package com.boomberman.test;
 
-import com.boomberman.app.MenuApp;
+import com.boomberman.app.Bomberman;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +14,7 @@ public class MainView extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MenuApp.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Bomberman.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {

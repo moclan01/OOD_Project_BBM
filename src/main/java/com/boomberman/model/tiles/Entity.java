@@ -17,13 +17,6 @@ public abstract class Entity {
     protected int spriteIndex = 0 ;
     protected final GraphicsContext gc;
 
-    /**
-     * Initialize object.
-     *
-     * @param x coordinate x
-     * @param y coordinate y
-     * @param spawned    spawned
-     */
     public Entity(double x, double y, boolean spawned) {
         this.gc = MainViewController.getGraphicContext();
         if (!spawned) {

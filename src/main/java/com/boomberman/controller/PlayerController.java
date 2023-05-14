@@ -17,16 +17,11 @@ public class PlayerController {
             @Override
             public void handle(KeyEvent event) {
                 switch (event.getCode()) {
-                    case UP :
-                        up = true;
-                    case DOWN :
-                        down = true;
-                    case LEFT :
-                        left = true;
-                    case RIGHT :
-                        right = true;
-                    case SPACE :
-                        bomb = true;
+                    case W, UP -> up = true;
+                    case S, DOWN -> down = true;
+                    case A, LEFT -> left = true;
+                    case D, RIGHT -> right = true;
+                    case X, SPACE -> bomb = true;
                 }
                 if (up || down || left || right) {
                     move = true;
@@ -38,16 +33,11 @@ public class PlayerController {
             @Override
             public void handle(KeyEvent event) {
                 switch (event.getCode()) {
-                    case UP :
-                        up = false;
-                    case DOWN :
-                        down = false;
-                    case LEFT :
-                        left = false;
-                    case RIGHT :
-                        right = false;
-                    case SPACE :
-                        bomb = false;
+                    case W, UP -> up = false;
+                    case S, DOWN -> down = false;
+                    case A, LEFT -> left = false;
+                    case D, RIGHT -> right = false;
+                    case X, SPACE -> bomb = false;
                 }
                 if (!up && !down && !left && !right) {
                     move = false;

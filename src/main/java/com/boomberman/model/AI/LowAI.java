@@ -20,6 +20,6 @@ public class LowAI extends AI{
             steps = 0;
             return -1;
         }
-        return random.nextInt(4) + 1;
+        return random.nextInt(4);
     }
 }

@@ -1,6 +1,6 @@
 package com.boomberman.model.sprites;
 
-import com.boomberman.app.MenuApp;
+import com.boomberman.app.Bomberman;
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
@@ -19,11 +19,12 @@ public class SpriteSheet {
     }
 
     private void load(){
-        InputStream inputStream = MenuApp.class.getResourceAsStream(path);
+        InputStream inputStream = Bomberman.class.getResourceAsStream(path);
         //kiểm tra đối tượng truyền vào
-        if(inputStream == null){
-            throw new RuntimeException("File not found: " + path);
-        }
+//        if(inputStream == null){
+//            throw new RuntimeException("File not found: " + path);
+//        }
+        assert inputStream != null;
         //truyền ảnh vào
         Image image = new Image(inputStream);
 
@@ -33,9 +34,9 @@ public class SpriteSheet {
         để lấy giá trị màu RGB của pixel tại vị trí (x, y). Giá trị này sau đó
         được lưu trữ trong mảng pixels ở vị trí tương ứng với pixel đó.
          */
-        for(int i = 0; i < size; i++){
-            for(int j = 0; j < size; j++){
-                pixels[j + i * size] = image.getPixelReader().getArgb(j,i);
+        for(int j = 0; j < size; j++){
+            for(int i = 0; i < size; i++){
+                pixels[i + j * size] = image.getPixelReader().getArgb(i,j);
             }
         }
     }

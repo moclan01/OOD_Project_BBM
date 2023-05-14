@@ -1,6 +1,6 @@
 package com.boomberman.test;
 
-import com.boomberman.app.MenuApp;
+import com.boomberman.app.Bomberman;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +11,7 @@ public class GameMenuView extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MenuApp.class.getResource("gamemenu-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Bomberman.class.getResource("gamemenu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         stage.initStyle(StageStyle.UNDECORATED);
